@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CipherX</string>
+    <string name="selectchoice">SELECT YOUR CHOICE</string>
+    <string name="encription"><![CDATA[Encription >]]></string>
+    <string name="string_encription">encriptionbtn</string>
+</resources>
