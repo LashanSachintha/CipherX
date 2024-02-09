@@ -9,7 +9,7 @@ import android.widget.Toast
 class EncryptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_encryption)
+        setContentView(R.layout.activity_selectmethod)
 
         // Find your buttons by their IDs
         val caesarcipertButton: Button = findViewById(R.id.caesarcipertbutton)

@@ -16,6 +16,16 @@
         <entry key="..\:/CipherX/app/src/main/res/layout/activity_encryption2.xml" value="0.34103260869565216" />
         <entry key="..\:/CipherX/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/CipherX/app/src/main/res/layout/activity_tripledes.xml" value="0.325" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_caesarcipher1.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_caesarcipher2.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_decryption.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_decryption_layout.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_encryption.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_encryption_layout.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/layout/activity_selectmethod.xml" value="0.3625" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2245" />
+        <entry key="..\:/Xampp/htdocs/CipherX/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2065" />
       </map>
     </option>
   </component>

@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CipherX">
         <activity
+            android:name=".activity_selectmethod"
+            android:exported="false" />
+        <activity
+            android:name=".activity_decryption_layout"
+            android:exported="false" />
+        <activity
+            android:name=".activity_encryption_layout"
+            android:exported="false" />
+        <activity
+            android:name=".activity_encryption_layour"
+            android:exported="false" />
+        <activity
             android:name=".activity_caesarcipher1"
             android:exported="false" />
         <activity
@@ -18,7 +30,6 @@
         <activity
             android:name=".activity_tripledes"
             android:exported="false" />
-
         <activity android:name=".EncryptionActivity">
 
             <!-- Add any additional configurations for EncryptionActivity if needed -->

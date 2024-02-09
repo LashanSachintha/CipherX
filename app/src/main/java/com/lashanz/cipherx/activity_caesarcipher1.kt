@@ -32,7 +32,7 @@ class activity_caesarcipher1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_caesarcipher1)
+        setContentView(R.layout.activity_encryption_layout)
 
         val encriptButton: Button = findViewById(R.id.encriptbutton)
         val copyButton: Button = findViewById(R.id.copybutton2)

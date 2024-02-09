@@ -40,7 +40,7 @@ class activity_caesarcipher2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_caesarcipher2)
+        setContentView(R.layout.activity_decryption_layout)
 
         val decriptButton: Button = findViewById(R.id.decriptbutton)
         val copyButton: Button = findViewById(R.id.copybutton2)
