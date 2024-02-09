@@ -11,16 +11,24 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
-class activity_caesarcipher1 : AppCompatActivity() {
+class activity_caesarcipher2 : AppCompatActivity() {
 
     private object CaesarCipher {
-        fun encrypt(text: String, shift: Int): String {
+        private const val DEFAULT_SHIFT = 3
+
+        fun decrypt(text: String, shift: Int = DEFAULT_SHIFT): String {
+            if (text.isEmpty()) {
+                // Handle empty input
+                return ""
+            }
+
             val result = StringBuilder()
 
             for (char in text) {
                 if (char.isLetter()) {
                     val start = if (char.isUpperCase()) 'A' else 'a'
-                    result.append((start + (char - start + shift) % 26).toChar())
+                    // Apply the modified Caesar Cipher decryption formula
+                    result.append((start + (char - start - shift + 26) % 26).toChar())
                 } else {
                     result.append(char)
                 }
@@ -32,32 +40,33 @@ class activity_caesarcipher1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_caesarcipher1)
+        setContentView(R.layout.activity_caesarcipher2)
 
-        val encriptButton: Button = findViewById(R.id.encriptbutton)
+        val decriptButton: Button = findViewById(R.id.decriptbutton)
         val copyButton: Button = findViewById(R.id.copybutton2)
         val imageView4: ImageView = findViewById(R.id.imageView4)
         val textInputEditText: TextInputEditText = findViewById(R.id.textInputEditText)
         val textView2: TextView = findViewById(R.id.textView2)
 
-        encriptButton.setOnClickListener {
-            val textToEncrypt = textInputEditText.text.toString()
-            val encryptedText = CaesarCipher.encrypt(textToEncrypt, 3) // Change the shift value as needed
-            textView2.text = encryptedText
+        decriptButton.setOnClickListener {
+            val textToDecrypt = textInputEditText.text.toString()
+            val decryptedText = CaesarCipher.decrypt(textToDecrypt)
+            textView2.text = decryptedText
         }
 
         copyButton.setOnClickListener {
-            val encryptedText = textView2.text.toString()
+            val decryptedText = textView2.text.toString()
 
             // Copy to clipboard
             val clipboardManager =
                 getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clipData = ClipData.newPlainText("Encrypted Text", encryptedText)
+            val clipData = ClipData.newPlainText("Decrypted Text", decryptedText)
             clipboardManager.setPrimaryClip(clipData)
 
             // Show a toast indicating successful copy
-            Toast.makeText(this, "Encrypted text copied to clipboard", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Decrypted text copied to clipboard", Toast.LENGTH_SHORT).show()
         }
+
         imageView4.setOnClickListener {
             onBackPressed() // Go back to the previous page
         }

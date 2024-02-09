@@ -13,14 +13,12 @@
             android:name=".activity_caesarcipher1"
             android:exported="false" />
         <activity
-            android:name=".activity_caesarcipher"
+            android:name=".activity_caesarcipher2"
             android:exported="false" />
         <activity
             android:name=".activity_tripledes"
             android:exported="false" />
-        <activity
-            android:name=".activity_caesar_cipher_input"
-            android:exported="false" />
+
         <activity android:name=".EncryptionActivity">
 
             <!-- Add any additional configurations for EncryptionActivity if needed -->
