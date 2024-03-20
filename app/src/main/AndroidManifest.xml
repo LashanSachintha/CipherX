@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lashanz.cipherx">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,18 +8,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CipherX">
+
         <activity
-            android:name=".activity_selectmethod"
-            android:exported="false" />
+            android:name=".ViginereCipher"
+            android:exported="false"/>
+
         <activity
-            android:name=".activity_decryption_layout"
+            android:name=".ViginereCipherDecripit"
             android:exported="false" />
-        <activity
-            android:name=".activity_encryption_layout"
-            android:exported="false" />
-        <activity
-            android:name=".activity_encryption_layour"
-            android:exported="false" />
+
         <activity
             android:name=".activity_caesarcipher1"
             android:exported="false" />
