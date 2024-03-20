@@ -86,7 +86,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_button"
-        android:text="Test2"
+        android:text="Rail Fense"
         android:textAlignment="gravity"
         android:textColor="@color/white"
         android:textSize="17dp"

@@ -33,8 +33,9 @@ class EncryptionActivity : AppCompatActivity() {
         }
 
         rsaButton3.setOnClickListener {
-            showToast("RSA Button 3 clicked")
-            // Handle button click and navigate to another activity
+            val intent = Intent(this, RailFenseEncrypt::class.java)
+            startActivity(intent)
+
         }
 
         rsaButton4.setOnClickListener {
