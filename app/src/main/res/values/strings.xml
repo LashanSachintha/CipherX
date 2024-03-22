@@ -3,4 +3,5 @@
     <string name="selectchoice">SELECT YOUR CHOICE</string>
     <string name="encription"><![CDATA[Encription >]]></string>
     <string name="string_encription">encriptionbtn</string>
+    <string name="method_2">VIGENERE CIPHER</string>
 </resources>

@@ -28,7 +28,7 @@ class EncryptionActivity : AppCompatActivity() {
 
         tripledesButton.setOnClickListener {
             // Handle button click and navigate to another activity
-            val intent = Intent(this, activity_tripledes::class.java)
+            val intent = Intent(this, ViginereCipher::class.java)
             startActivity(intent)
         }
 
