@@ -49,6 +49,12 @@
         <activity
             android:name=".RailFenseDecrypt"
             android:exported="false" />
+        <activity
+            android:name=".RowColumnDecrypt"
+            android:exported="false" />
+        <activity
+            android:name=".RowColumnEncrypt"
+            android:exported="false" />
     </application>
 
 </manifest>
