@@ -3,6 +3,7 @@ package com.lashanz.cipherx
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.graphics.ImageFormat
 import android.os.Bundle
 import android.support.design.widget.TextInputEditText
 import android.support.v7.app.AppCompatActivity
@@ -47,18 +48,27 @@ class RailFenseEncrypt : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_encryption_layout)
+        setContentView(R.layout.railfense_encryption_layout)
 
         val encryptButton: Button = findViewById(R.id.encriptbutton)
         val copyButton: Button = findViewById(R.id.copybutton2)
         val imageView4: ImageView = findViewById(R.id.imageView4)
         val textInputEditText: TextInputEditText = findViewById(R.id.textInputEditText)
         val textView2: TextView = findViewById(R.id.textView2)
+        val Depth: TextInputEditText = findViewById(R.id.textInputEditText2)
 
         encryptButton.setOnClickListener {
-            val textToEncrypt = textInputEditText.text.toString()
-            val encryptedText = RailFenceCipher.encrypt(textToEncrypt, 3) // Change the depth value as needed
-            textView2.text = encryptedText
+            val Depth = Depth.text.toString().toIntOrNull()
+
+            if (Depth == null) {
+                showToast("Depth value can not be empty")
+            } else {
+                val textToEncrypt = textInputEditText.text.toString()
+                val encryptedText = RailFenceCipher.encrypt(textToEncrypt, Depth) // Change the depth value as needed
+                textView2.text = encryptedText
+            }
+
+
         }
 
         copyButton.setOnClickListener {
@@ -75,6 +85,9 @@ class RailFenseEncrypt : AppCompatActivity() {
         imageView4.setOnClickListener {
             onBackPressed() // Go back to the previous page
         }
+    }
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
 }

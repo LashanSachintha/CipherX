@@ -62,18 +62,26 @@ class RailFenseDecrypt : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_decryption_layout)
+        setContentView(R.layout.railfense_decryption_layout)
 
         val decryptButton: Button = findViewById(R.id.decriptbutton)
         val copyButton: Button = findViewById(R.id.copybutton2)
         val imageView4: ImageView = findViewById(R.id.imageView4)
         val textInputEditText: TextInputEditText = findViewById(R.id.textInputEditText)
         val textView2: TextView = findViewById(R.id.textView2)
+        val Depth: TextInputEditText = findViewById(R.id.textInputEditText2)
 
         decryptButton.setOnClickListener {
-            val textToDecrypt = textInputEditText.text.toString()
-            val decryptedText = RailFenceCipher.decrypt(textToDecrypt, 3) // Change the depth value as needed
-            textView2.text = decryptedText
+            val Depth = Depth.text.toString().toIntOrNull()
+
+            if (Depth == null) {
+                showToast("Depth value can not be empty")
+            } else {
+                val textToDecrypt = textInputEditText.text.toString()
+                val decryptedText = RailFenceCipher.decrypt(textToDecrypt, Depth) // Change the depth value as needed
+                textView2.text = decryptedText
+            }
+
         }
 
         copyButton.setOnClickListener {
@@ -90,6 +98,9 @@ class RailFenseDecrypt : AppCompatActivity() {
         imageView4.setOnClickListener {
             onBackPressed() // Go back to the previous page
         }
+    }
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
 }
