@@ -86,7 +86,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_button"
-        android:text="Rail Fense"
+        android:text="Rail Fense Cipher"
         android:textAlignment="gravity"
         android:textColor="@color/white"
         android:textSize="17dp"
@@ -102,7 +102,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
-        android:text="Test3"
+        android:text="Row Column Cipher"
         android:textAlignment="gravity"
         android:textColor="@color/white"
         android:textSize="17dp"
@@ -111,21 +111,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rsatbutton3" />
 
-    <Button
-        android:id="@+id/rsatbutton5"
-        android:layout_width="191dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/rounded_button"
-        android:text="Test4"
-        android:textAlignment="gravity"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rsatbutton4"
-        app:layout_constraintVertical_bias="0.011" />
 
 </android.support.constraint.ConstraintLayout>

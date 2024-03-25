@@ -17,7 +17,7 @@ class DecryptionActivity : AppCompatActivity() {
         val tripledesButton: Button = findViewById(R.id.tripledesbutton)
         val rsaButton3: Button = findViewById(R.id.rsatbutton3)
         val rsaButton4: Button = findViewById(R.id.rsatbutton4)
-        val rsaButton5: Button = findViewById(R.id.rsatbutton5)
+
         val imageView4: ImageView = findViewById(R.id.imageView4)
 
         // Set a click listener for the Caesar Cipher button
@@ -40,14 +40,11 @@ class DecryptionActivity : AppCompatActivity() {
         }
 
         rsaButton4.setOnClickListener {
-            showToast("RSA Button 4 clicked")
-            // Handle button click and navigate to another activity
+            val intent = Intent(this, RailFenseDecrypt::class.java)
+            startActivity(intent)
         }
 
-        rsaButton5.setOnClickListener {
-            showToast("RSA Button 5 clicked")
-            // Handle button click and navigate to another activity
-        }
+
 
         imageView4.setOnClickListener {
             onBackPressed() // Go back to the previous page
